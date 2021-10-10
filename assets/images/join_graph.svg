@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180px" height="179px" viewBox="0 0 180 179" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>@0.5xAsset#11</title>
+    <defs>
+        <filter color-interpolation-filters="auto" id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 0.341176 0 0 0 0 0.137255 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Page-FAQ-More" transform="translate(-166.000000, -2052.000000)">
+            <g id="Asset#11" transform="translate(0.000000, 2089.000000)" filter="url(#filter-1)">
+                <g transform="translate(255.699596, 52.172757) rotate(60.000000) translate(-255.699596, -52.172757) translate(190.947446, -14.018743)">
+                    <polygon id="Fill-1" fill="#2960A7" points="36.865 132.383 45.343 123.738 11.726 3.019 0 0"></polygon>
+                    <polygon id="Fill-2" fill="#2960A7" points="53.6113 115.3055 23.1633 5.9635 35.0073 9.0135 62.1743 106.5725"></polygon>
+                    <polygon id="Fill-3" fill="#2960A7" points="70.4434 98.1405 46.4444 11.9585 58.2894 15.0085 79.0074 89.4075"></polygon>
+                    <polygon id="Fill-4" fill="#2960A7" points="87.2759 80.975 69.7259 17.953 81.5709 21.003 95.8399 72.242"></polygon>
+                    <polygon id="Fill-5" fill="#2960A7" points="104.1079 63.8104 93.0079 23.9474 104.8529 26.9974 112.6719 55.0774"></polygon>
+                    <polygon id="Fill-6" fill="#2960A7" points="120.9403 46.6445 129.5043 37.9115 128.1343 32.9925 116.2893 29.9425"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

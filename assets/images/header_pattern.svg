@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="700px" viewBox="0 0 1440 700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Shape + Group Mask@3x</title>
+    <defs>
+        <path d="M1440,0 L0,0 L0,350 C0,541.366666 142.682633,696.862333 319.784154,699.95311 L325.16129,700 L1440,700 L1440,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Page-FAQ-More" transform="translate(0.000000, -100.000000)">
+            <g id="Shape-+-Group-Mask" transform="translate(0.000000, 100.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#FFFFFF" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
