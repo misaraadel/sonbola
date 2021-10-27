@@ -440,7 +440,7 @@ header{
             }
         }
         input[type="file"]{
-            display: none;
+          display: none;
         }
         .form-label-shape{
             width: 100%;
@@ -534,6 +534,9 @@ header{
         font-size: 16px;
         font-weight: 900;
         line-height: 28px;
+        &:disabled{
+            background-color: rgba($color: #ff5723 , $alpha: .5);
+        }
     }
 }
 .questions{
@@ -907,6 +910,58 @@ header{
         animation-fill-mode: forwards;
     } 
 }   
+.loadData {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999 !important;
+    .wrapper {
+        position: absolute;
+        top: calc(50% - 32px);
+        left: calc(50% - 32px);
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        perspective: 800px;
+        .inner {
+            position: absolute;
+            box-sizing: border-box;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            &.one {
+                left: 0%;
+                top: 0%;
+                animation: rotate-one 1s linear infinite;
+                border-bottom: 3px solid #ff5723;
+            }
+            &.two {
+                right: 0%;
+                top: 0%;
+                animation: rotate-two 1s linear infinite;
+                border-right: 3px solid #ff5723;
+            }
+            &.three {
+                right: 0%;
+                bottom: 0%;
+                animation: rotate-three 1s linear infinite;
+                border-top: 3px solid #ff5723;
+            }
+        }
+    }
+    &.hidden {
+        animation: loaderSlideDown 1s;
+        animation-fill-mode: forwards;
+
+    } 
+}
 .scroll-top-btn{
     width: 50px;
     height: 50px;

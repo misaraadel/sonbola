@@ -44,5 +44,8 @@ $(document).ready(function () {
         $('.poup-window').removeClass('acitve-popup');
         $('body').removeClass('overflowNone');
     });
+    $('.form-group input[type="file"]').change(function(){
+        $(this).next('.form-label-shape').text($(this).val())
+    });
 });
 console.log('version 0.0.1');
