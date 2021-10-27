@@ -213,12 +213,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-12">
-                                                    <div class="form-group">
+                                                    <div class="form-group file-input-group">
                                                         <label class="label-content">شعار المتجر</label>
-                                                        <input type="file" id="file" class="form-control" accept="image/" />
-                                                        <label for="file" class="form-label-shape">
-                                                            شعار المتجر 
-                                                        </label>
+                                                        <div class="file__input" id="file__input">
+                                                            <input type="file" id="customFile" class="form-control file__input--file_store" accept="image/" />
+                                                            <label for="customFile" class="file__input--label form-label-shape">
+                                                                شعار المتجر 
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-12">
@@ -263,12 +265,14 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-12">
-                                                    <div class="form-group">
+                                                    <div class="form-group  file-input-group">
                                                         <label class="label-content">صوره السائق</label>
-                                                        <input type="file" id="file" class="form-control" accept="image/" />
-                                                        <label for="file" class="form-label-shape">
-                                                            صوره السائق 
-                                                        </label>
+                                                        <div class="file__input" id="file__input_driver">
+                                                            <input type="file" id="driver_photo" class="form-control file__input--file_driver" accept="image/" />
+                                                            <label for="driver_photo" class="file__input--label form-label-shape">
+                                                                صوره السائق 
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-12">
@@ -290,21 +294,25 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-12">
-                                                    <div class="form-group">
+                                                    <div class="form-group file-input-group">
                                                         <label class="label-content">رخصة السواقة</label>
-                                                        <input type="file" id="drive" class="form-control" accept="image/" />
-                                                        <label for="drive" class="form-label-shape">
-                                                            رخصة السواقة 
-                                                        </label>
+                                                        <div class="file__input" id="file__input_drive_card">
+                                                            <input type="file" id="drive_card" class="form-control file__input--file_drive_card" accept="image/" />
+                                                            <label for="drive_card" class="file__input--label form-label-shape">
+                                                                رخصة السواقة 
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 col-md-6 col-12">
-                                                    <div class="form-group">
+                                                    <div class="form-group file-input-group">
                                                         <label class="label-content">الاستمارة</label>
-                                                        <input type="file" id="annoncement" class="form-control" accept="image/" />
-                                                        <label for="annoncement" class="form-label-shape">
-                                                            الاستمارة 
-                                                        </label>
+                                                        <div class="file__input" id="file__input_annoncement">
+                                                            <input type="file" id="annoncement" class="form-control file__input--file_annoncement" accept="image/" />
+                                                            <label for="annoncement" class="file__input--label form-label-shape">
+                                                                الاستمارة 
+                                                            </label>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -628,16 +636,11 @@
 
         <!--loading page-->
         <div class="loader">
-            <div class="container">
-                 <div class="loading-content">
-                     <div class="drop-water light-blue"></div>
-                     <div class="drop-water light-blue"></div>
-                     <div class="box">
-                         <div class="wave light-blue">
-         
-                         </div>
-                     </div>
-                 </div>
+            <div class="preloader-inner">
+                <div class="spinner">
+                    <div class="dot1"></div>
+                    <div class="dot2"></div>
+                </div>
             </div>
         </div>
         <!--Scroll to top button-->
@@ -654,5 +657,69 @@
         <!--end the intialize of js lib-->
         <!--intialize main js file-->
         <script src="assets/js/main.js"></script>
+        <script>
+            
+            $(document).ready(function() {
+                $('.file__input--file_store').on('change', function(event) {
+                    var files = event.target.files;
+                    for (var i = 0; i < files.length; i++) {
+                        var file = files[i];
+                        $("<div class='file__value'><div class='file__value--text'>" + file.name + "</div><div class='file__value--remove' data-id='" + file.name + "' ></div></div>").insertAfter('#file__input');
+                    }
+                });
+                $('body').on('click', '.file__value', function() {
+                    $(this).remove();
+                });
+            });
+
+        </script>
+        <script>
+            
+            $(document).ready(function() {
+                $('.file__input--file_driver').on('change', function(event) {
+                    var files = event.target.files;
+                    for (var i = 0; i < files.length; i++) {
+                        var file = files[i];
+                        $("<div class='file__value'><div class='file__value--text'>" + file.name + "</div><div class='file__value--remove' data-id='" + file.name + "' ></div></div>").insertAfter('#file__input_driver');
+                    }
+                });
+                $('body').on('click', '.file__value', function() {
+                    $(this).remove();
+                });
+            });
+
+        </script>
+        <script>
+            
+            $(document).ready(function() {
+                $('.file__input--file_drive_card').on('change', function(event) {
+                    var files = event.target.files;
+                    for (var i = 0; i < files.length; i++) {
+                        var file = files[i];
+                        $("<div class='file__value'><div class='file__value--text'>" + file.name + "</div><div class='file__value--remove' data-id='" + file.name + "' ></div></div>").insertAfter('#file__input_drive_card');
+                    }
+                });
+                $('body').on('click', '.file__value', function() {
+                    $(this).remove();
+                });
+            });
+
+        </script>
+        <script>
+            
+            $(document).ready(function() {
+                $('.file__input--file_annoncement').on('change', function(event) {
+                    var files = event.target.files;
+                    for (var i = 0; i < files.length; i++) {
+                        var file = files[i];
+                        $("<div class='file__value'><div class='file__value--text'>" + file.name + "</div><div class='file__value--remove' data-id='" + file.name + "' ></div></div>").insertAfter('#file__input_annoncement');
+                    }
+                });
+                $('body').on('click', '.file__value', function() {
+                    $(this).remove();
+                });
+            });
+
+        </script>
     </body>
 </html>
